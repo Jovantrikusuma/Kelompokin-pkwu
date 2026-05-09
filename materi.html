@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi PKWU - XI RPL II</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        .materi-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+        }
+        .materi-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .materi-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        @media (max-width: 768px) {
+            .materi-header {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+            .materi-header h1 {
+                font-size: 1.8rem;
+            }
+            .content-area {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="dashboard-nav">
+        <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> PKWU</a>
+        <div class="nav-links">
+            <a href="beranda.html">Beranda</a>
+            <a href="materi.html" class="active">Materi</a>
+            <a href="kuis.html">Kuis</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <div class="container-materi">
+        <!-- Tambahan Header Materi -->
+        <div class="materi-header">
+            <h1><i class="fas fa-book-reader"></i> Daftar Materi Pembelajaran</h1>
+            <p>Pilih dari 5 Bab komprehensif di bawah ini untuk mulai belajar!</p>
+        </div>
+
+        <div class="bab-cards-container" id="bab-cards">
+            <div class="bab-card" onclick="showBab(1)">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000" alt="Bab 1: Wirausaha">
+                <div class="bab-card-content">
+                    <h3>Bab 1: Wirausaha</h3>
+                    <p>Pelajari dasar-dasar kewirausahaan dan karakteristik yang dibutuhkan untuk sukses.</p>
+                </div>
+            </div>
+            <div class="bab-card" onclick="showBab(2)">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000" alt="Bab 2: Peluang Usaha">
+                <div class="bab-card-content">
+                    <h3>Bab 2: Peluang Usaha</h3>
+                    <p>Cara mengenali, menganalisis, dan memanfaatkan peluang usaha yang ada.</p>
+                </div>
+            </div>
+            <div class="bab-card" onclick="showBab(3)">
+                <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1000" alt="Bab 3: Konsep & Kemasan">
+                <div class="bab-card-content">
+                    <h3>Bab 3: Konsep Desain & Kemasan Produk</h3>
+                    <p>Pentingnya desain dan kemasan dalam meningkatkan nilai jual sebuah produk.</p>
+                </div>
+            </div>
+            <div class="bab-card" onclick="showBab(4)">
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000" alt="Bab 4: HAKI">
+                <div class="bab-card-content">
+                    <h3>Bab 4: HAKI</h3>
+                    <p>Mengenal Hak Kekayaan Intelektual untuk melindungi karya dan ide bisnis Anda.</p>
+                </div>
+            </div>
+            <div class="bab-card" onclick="showBab(5)">
+                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1000" alt="Bab 5: Prototipe Produk">
+                <div class="bab-card-content">
+                    <h3>Bab 5: Proses Pembuatan Prototipe</h3>
+                    <p>Memahami tahapan pembuatan contoh atau prototipe produk barang dan jasa.</p>
+                </div>
+            </div>
+        </div>
+
+        <main class="content-area" id="content-display">
+            <button class="btn-back" onclick="showDaftarBab()">← Kembali ke Daftar Bab</button>
+            <div id="bab-content" class="animate-in">
+                <!-- Konten materi akan dimuat secara dinamis di sini -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

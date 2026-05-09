@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran PKWU</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @media (max-width: 768px) {
+            .dashboard-nav {
+                padding: 15px 20px !important;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .hero {
+                padding: 100px 20px !important;
+                height: auto !important;
+                min-height: 100vh;
+            }
+            .hero h1 {
+                font-size: 2.5rem !important;
+            }
+            .hero p {
+                font-size: 1rem !important;
+            }
+            #about-web {
+                padding: 60px 20px !important;
+            }
+            #about-web h2 {
+                font-size: 1.8rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="dashboard-nav" style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); position: fixed; width: 100%; top: 0; z-index: 100; display: flex; justify-content: space-between; padding: 20px 50px; align-items: center;">
+        <a href="index.html" class="logo" style="color: #2c3e50; font-size: 1.5rem; font-weight: bold; text-decoration: none;"><i class="fas fa-graduation-cap" style="color: #4facfe;"></i> PKWU E-Learning</a>
+        <div class="nav-links">
+            <a href="#about-web" style="color: #2c3e50; text-decoration: none; margin-right: 25px; font-weight: 600;">Tentang</a>
+            <a href="beranda.html" class="btn-dashboard primary" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 10px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);">Mulai Belajar <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 100vh; background: linear-gradient(rgba(15, 32, 39, 0.8), rgba(32, 58, 67, 0.8), rgba(44, 83, 100, 0.8)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070') center/cover no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 20px;">
+        <span style="padding: 8px 20px; background: rgba(255,255,255,0.15); backdrop-filter: blur(5px); border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-bottom: 25px; letter-spacing: 2px;">SMKN 2 BANDAR LAMPUNG</span>
+        <h1 style="font-size: 4.5rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; max-width: 900px; line-height: 1.1; text-shadow: 0 10px 20px rgba(0,0,0,0.3);">Wujudkan Mimpimu Menjadi <span style="color: #4facfe;">Wirausaha Sukses</span></h1>
+        <p style="font-size: 1.25rem; margin-bottom: 40px; max-width: 700px; line-height: 1.6; opacity: 0.9;">Pelajari dasar-dasar kewirausahaan, temukan peluang usaha, dan buat desain kemasan produkmu sendiri melalui platform edukasi interaktif ini.</p>
+        <a href="beranda.html" style="background: #4facfe; color: #fff; padding: 18px 45px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: all 0.3s ease; box-shadow: 0 10px 25px rgba(79, 172, 254, 0.5);">GET STARTED 🚀</a>
+    </header>
+
+    <section id="about-web" style="padding: 100px 20px; text-align: center; background: #f8fafd;">
+        <div style="max-width: 900px; margin: auto;">
+            <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 25px;">Tentang <span style="color: #4facfe;">Website Ini</span></h2>
+            <p style="font-size: 1.15rem; color: #7f8c8d; line-height: 1.8; margin-bottom: 40px;">Website ini merupakan platform pembelajaran interaktif untuk mata pelajaran Prakarya dan Kewirausahaan (PKWU). Dibuat khusus untuk memudahkan siswa memahami materi dasar kewirausahaan dengan tampilan yang modern dan akses materi yang mudah.</p>
+            
+            <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); flex: 1; min-width: 250px;">
+                    <i class="fas fa-book" style="font-size: 2.5rem; color: #4facfe; margin-bottom: 15px;"></i>
+                    <h3 style="color: #2c3e50; margin-bottom: 10px;">Materi Lengkap</h3>
+                    <p style="color: #7f8c8d; font-size: 0.95rem;">5 Bab pembahasan komprehensif mulai dari dasar hingga pembuatan prototipe.</p>
+                </div>
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); flex: 1; min-width: 250px;">
+                    <i class="fas fa-tasks" style="font-size: 2.5rem; color: #4facfe; margin-bottom: 15px;"></i>
+                    <h3 style="color: #2c3e50; margin-bottom: 10px;">Kuis Interaktif</h3>
+                    <p style="color: #7f8c8d; font-size: 0.95rem;">Uji pemahamanmu secara langsung dengan sistem skor otomatis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

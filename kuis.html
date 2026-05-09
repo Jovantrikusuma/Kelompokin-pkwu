@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis - E-Learning PKWU</title>
+    <link rel="stylesheet" href="style.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @media (max-width: 768px) {
+            .quiz-header h2 {
+                font-size: 1.5rem;
+            }
+            .quiz-body {
+                padding: 30px 20px;
+            }
+            .score-circle {
+                width: 120px;
+                height: 120px;
+                font-size: 3rem;
+            }
+            .result-stats {
+                gap: 15px;
+            }
+            .stat-box {
+                padding: 15px;
+                min-width: 100px;
+            }
+            .stat-box h4 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="dashboard-body">
+
+    <nav class="dashboard-nav">
+        <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> PKWU</a>
+        <div class="nav-links">
+            <a href="beranda.html">Beranda</a>
+            <a href="materi.html">Materi</a>
+            <a href="kuis.html" class="active">Kuis</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Tombol Kembali di Atas Kiri -->
+        <div class="quiz-top-nav">
+            <a href="beranda.html" class="quiz-back-btn">
+                <i class="fas fa-chevron-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+
+        <!-- Setup Layar Kuis -->
+        <div id="quiz-setup" class="quiz-card animate-in">
+            <div class="quiz-header">
+                <div class="quiz-header-decoration-1"></div>
+                <div class="quiz-header-decoration-2"></div>
+                <h2><i class="fas fa-clipboard-list"></i> Persiapan Kuis</h2>
+                <p>Uji pemahamanmu tentang 5 Bab materi Prakarya dan Kewirausahaan.</p>
+            </div>
+            <div class="quiz-body">
+                <div class="form-group">
+                    <label for="bab-select">Pilih Materi Kuis:</label>
+                    <div class="select-wrapper">
+                        <select id="bab-select">
+                            <option value="semua">Semua Bab (Campuran)</option>
+                            <option value="1">Bab 1: Dasar Wirausaha</option>
+                            <option value="2">Bab 2: Peluang Usaha</option>
+                            <option value="3">Bab 3: Konsep Desain & Kemasan Produk</option>
+                            <option value="4">Bab 4: HAKI</option>
+                            <option value="5">Bab 5: Prototipe Produk</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <button type="button" class="btn-dashboard primary w-100" onclick="mulaiKuis()">
+                    <i class="fas fa-play"></i> Mulai Kuis Sekarang
+                </button>
+            </div>
+        </div>
+
+        <!-- Layar Aktif Kuis -->
+        <div id="quiz-active" class="quiz-card" style="display: none;">
+            <div class="quiz-header">
+                <div class="quiz-header-decoration-1"></div>
+                <h2><i class="fas fa-pen"></i> Sedang Mengerjakan Kuis</h2>
+                <p id="quiz-subtitle">Materi: Campuran</p>
+            </div>
+            <div class="quiz-body">
+                <form id="quizForm">
+                    <div id="quiz-container">
+                        <!-- Soal kuis akan dimuat secara dinamis di sini -->
+                    </div>
+                    <button type="button" class="btn-dashboard primary w-100" onclick="hitungSkor()">
+                        <i class="fas fa-paper-plane"></i> Kirim Jawaban
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Layar Hasil Kuis -->
+        <div id="quiz-result" class="quiz-card" style="display: none; text-align: center;">
+            <div class="quiz-header">
+                <div class="quiz-header-decoration-2" style="left: -20px; width: 150px; height: 150px; background: rgba(255,255,255,0.3);"></div>
+                <h2><i class="fas fa-chart-line"></i> Hasil Kuis Anda</h2>
+            </div>
+            <div class="quiz-body result-body">
+                <div class="score-circle">
+                    <span id="score-text">0</span>
+                </div>
+                <h3 id="result-message">Luar Biasa!</h3>
+                <div class="result-stats">
+                    <div class="stat-box correct">
+                        <i class="fas fa-check"></i>
+                        <h4 id="stat-correct">0</h4>
+                        <p>Benar</p>
+                    </div>
+                    <div class="stat-box wrong">
+                        <i class="fas fa-times"></i>
+                        <h4 id="stat-wrong">0</h4>
+                        <p>Salah</p>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button type="button" class="btn-dashboard secondary" onclick="ulangKuis()">
+                        <i class="fas fa-redo"></i> Coba Lagi Kuis
+                    </button>
+                </div>
+
+                <div id="quiz-review" class="review-container">
+                    <!-- Review soal akan muncul di sini -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=3"></script>
+</body>
+</html>
